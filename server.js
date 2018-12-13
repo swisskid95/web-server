@@ -16,8 +16,6 @@ const middleWare = {
 
 app.use(middleWare.logger);
 
-// app.use(middleWare.reqAutentication);
-
 app.get("/about", middleWare.reqAutentication, (req, res) => {
   res.send("About us!");
 });
@@ -25,5 +23,5 @@ app.get("/about", middleWare.reqAutentication, (req, res) => {
 app.use(express.static(`${__dirname}/public`));
 
 app.listen(port, () => {
-  console.log(`Express server has started on port ${port} ...`);
+  console.log(`Express server has started on port ${port}!`);
 });
